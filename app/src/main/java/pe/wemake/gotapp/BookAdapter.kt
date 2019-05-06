@@ -30,20 +30,20 @@ class BookAdapter(context: Context) :  RecyclerView.Adapter<BookAdapter.ViewHold
         with(holder){
             var book = books[position]
 
-            var mainImageRequest = ImageRequest(book.picture, {
+            var mainImageRequest = ImageRequest("http://placekitten.com/200/300", {
                 bookImageView.setImageBitmap(it);
             }, 0,0, null, null,
                 {
                     Log.d("stuff", it.toString())
                 }
             )
-            bookNameTextView.text = pet.name
+            bookNameTextView.text = book.name
 
-            itemView.setOnClickListener{
-                val action = PetListFragmentDirections.getPetDetail(pet.id, pet.name)
-                itemView.findNavController().navigate(action, null )
-            }
-            requestQueue.add(mainImageRequest)
+           // itemView.setOnClickListener{
+           //    val action = PetListFragmentDirections.getPetDetail(pet.id, pet.name)
+           //   itemView.findNavController().navigate(action, null )
+           // }
+           requestQueue.add(mainImageRequest)
         }
     }
     fun setBooks(books: List<Book>){
@@ -59,5 +59,3 @@ class BookAdapter(context: Context) :  RecyclerView.Adapter<BookAdapter.ViewHold
 
 }
 
-
-}
