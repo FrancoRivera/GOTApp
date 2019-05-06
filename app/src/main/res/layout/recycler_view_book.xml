@@ -7,14 +7,14 @@
           android:gravity="center"
 >
     <ImageView
-            android:id="@+id/pet_image"
+            android:id="@+id/book_image"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:padding="0dp"
             android:src="@drawable/ic_home_black_24dp"
     />
     <TextView
-            android:id="@+id/pet_name"
+            android:id="@+id/book_name"
             android:text="Placeholder_name"
             android:layout_margin="@dimen/big_padding"
             android:textSize="20dp"
